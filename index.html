@@ -4,43 +4,247 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>InspireArtHub</title>
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
         <header>
-            <h1>Inspire Art Hub</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="container">
+                <h1>Inspire Art Hub</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
             <section id="about">
-                <h2>About InspireArtHub</h2>
-                <p>
-                    Welcome to InspireArtHub, where creativity knows no bounds.
-                    We are dedicated to showcasing the most inspiring artworks
-                    from around the globe.
-                </p>
+                <div class="container">
+                    <h2>About InspireArtHub</h2>
+                    <p>
+                        Welcome to InspireArtHub, where creativity knows no
+                        bounds. We are dedicated to showcasing the most
+                        inspiring artworks from around the globe.
+                    </p>
+                </div>
             </section>
             <section id="gallery">
-                <h2>Gallery</h2>
-                <div class="grid-container">
-                    <!-- Asimetris grid akan ditampilkan di sini -->
-                    <!-- Setiap karya seni akan dimasukkan dalam elemen yang sesuai -->
+                <div class="container">
+                    <h2>Gallery</h2>
+                    <div class="grid-container">
+                        <div class="grid-wrapper">
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/barcs-tamas-fgpdIFFAoMU-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/barcs-tamas-fgpdIFFAoMU-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/barcs-tamas-fgpdIFFAoMU-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/leonsa-fVNyjet1CXY-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/leonsa-fVNyjet1CXY-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/leonsa-fVNyjet1CXY-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/fresh-grass-with-sky-background.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/fresh-grass-with-sky-background.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/fresh-grass-with-sky-background.jpg"
+                                        alt="Fresh Grass"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="grid-wrapper">
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/girl-with-red-hat-xPW7_XEZSM4-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/girl-with-red-hat-xPW7_XEZSM4-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/girl-with-red-hat-xPW7_XEZSM4-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/linh-le-Ebwp2-6BG8E-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/linh-le-Ebwp2-6BG8E-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/linh-le-Ebwp2-6BG8E-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/birmingham-museums-trust-wgZgKLeKQh4-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/birmingham-museums-trust-wgZgKLeKQh4-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/birmingham-museums-trust-wgZgKLeKQh4-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="grid-wrapper">
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/orian-lev-ari-qmTUGtSIpfg-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/orian-lev-ari-qmTUGtSIpfg-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/orian-lev-ari-qmTUGtSIpfg-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/mika-korhonen-6QMcMrkRkms-unsplash.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/mika-korhonen-6QMcMrkRkms-unsplash.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/mika-korhonen-6QMcMrkRkms-unsplash.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="grid-item">
+                                <picture>
+                                    <source
+                                        media="(min-width:640px)"
+                                        srcset="
+                                            /assets/images/galleries/original-fac74fc36710b8b1023106a2d2183bd9.jpg
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width:768px)"
+                                        srcset="
+                                            /assets/images/galleries/original-fac74fc36710b8b1023106a2d2183bd9.jpg
+                                        "
+                                    />
+                                    <img
+                                        src="/assets/images/galleries/original-fac74fc36710b8b1023106a2d2183bd9.jpg"
+                                        alt="Flowers"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="contact">
                 <h2>Contact Us</h2>
                 <form action="submit.php" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                        ></textarea>
+                    </div>
+
                     <button type="submit">Send</button>
                 </form>
             </section>
@@ -48,6 +252,7 @@
         <footer>
             <p>&copy; 2024 InspireArtHub. All rights reserved.</p>
             <a
+                style="display: none"
                 href="https://www.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_11667116.htm#fromView=search&page=1&position=17&uuid=974da4a7-9804-4402-bf14-dd7829216dc2"
                 >Image by vectorjuice on Freepik</a
             >
