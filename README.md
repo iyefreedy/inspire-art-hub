@@ -6,6 +6,10 @@ This repository contains website with asymmetric grid and dark mode.
 
 See demo [here](https://freedcode.shop)
 
+or
+
+[Netlify](https://freedcode.netlify.app)
+
 Welcome to the InspireArtHub website! This website is dedicated to provide art inspirations and galleries.
 
 ## Table of Contents
