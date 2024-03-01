@@ -25,6 +25,7 @@
                 <ul>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Explore</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
 
@@ -56,7 +57,14 @@
             </div>
         </nav>
 
-        <aside></aside>
+        <aside>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
 
         <main>
             <section id="about">
@@ -161,6 +169,7 @@
                     </div>
                 </div>
             </section>
+
             <section id="gallery">
                 <div class="container">
                     <h2>Gallery</h2>
@@ -259,6 +268,43 @@
                                 alt="Flowers"
                             />
                         </picture>
+
+                        <picture class="grid-item">
+                            <source
+                                media="(min-width:640px)"
+                                srcset="
+                                    /assets/images/gallery/mika-korhonen-6QMcMrkRkms-unsplash.jpg
+                                "
+                            />
+                            <source
+                                media="(min-width:768px)"
+                                srcset="
+                                    /assets/images/gallery/mika-korhonen-6QMcMrkRkms-unsplash.jpg
+                                "
+                            />
+                            <img
+                                src="/assets/images/gallery/mika-korhonen-6QMcMrkRkms-unsplash.jpg"
+                                alt="Flowers"
+                            />
+                        </picture>
+                        <picture class="grid-item">
+                            <source
+                                media="(min-width:640px)"
+                                srcset="
+                                    /assets/images/gallery/orian-lev-ari-qmTUGtSIpfg-unsplash.jpg
+                                "
+                            />
+                            <source
+                                media="(min-width:768px)"
+                                srcset="
+                                    /assets/images/gallery/orian-lev-ari-qmTUGtSIpfg-unsplash.jpg
+                                "
+                            />
+                            <img
+                                src="/assets/images/gallery/orian-lev-ari-qmTUGtSIpfg-unsplash.jpg"
+                                alt="Flowers"
+                            />
+                        </picture>
                     </div>
                 </div>
             </section>
@@ -275,6 +321,7 @@
                     </ul>
                 </div>
             </section>
+
             <section id="contact">
                 <div class="container">
                     <h2>Contact Us</h2>
@@ -306,6 +353,7 @@
                 </div>
             </section>
         </main>
+
         <footer>
             <div class="container">
                 <p>&copy; 2024 InspireArtHub. All rights reserved.</p>
@@ -317,11 +365,19 @@
             const htmlElement = document.querySelector("html");
 
             document.addEventListener("DOMContentLoaded", function (event) {
-                localStorage.setItem("theme", "dark");
+                const currentTheme = localStorage.getItem("theme");
+
+                if (currentTheme === "dark") {
+                    htmlElement.classList.add("dark");
+                    themeSwitcher.checked = true;
+                }
+
                 themeSwitcher.addEventListener("change", function (event) {
                     if (event.target.checked) {
+                        localStorage.setItem("theme", "dark");
                         htmlElement.classList.add("dark");
                     } else {
+                        localStorage.setItem("theme", "light");
                         htmlElement.classList.remove("dark");
                     }
                 });

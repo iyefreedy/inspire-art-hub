@@ -179,6 +179,7 @@ nav .nav-button {
     border-color: transparent;
     outline: none;
     background-color: transparent;
+    transition: border-color 0.2s ease-in;
 }
 
 nav .nav-button:focus {
@@ -190,11 +191,54 @@ nav .nav-button span {
     height: 2px;
     width: 100%;
     background-color: var(--dark-gray);
+    transition: opacity 0.3s ease, transform 0.3s ease-in;
+}
+
+nav .nav-button span:first-child {
+    transform-origin: 4px 4px;
+}
+
+nav .nav-button span:last-child {
+    transform-origin: 4px -2px;
+}
+
+nav .nav-button:focus span:first-child {
+    transform: rotate(45deg);
+}
+
+nav .nav-button:focus span:last-child {
+    transform: rotate(-45deg);
+}
+
+nav .nav-button:focus span:nth-child(2) {
+    opacity: 0;
 }
 
 nav ul,
 nav a {
     display: none;
+}
+
+nav:not(:has(.nav-button:focus)) ~ aside {
+    left: -4rem;
+    width: 0;
+}
+
+aside {
+    position: fixed;
+    top: 4.5rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 300px;
+    padding: 2rem;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+aside ul li:not(:last-child) {
+    margin-bottom: 1.5rem;
 }
 
 main section {
@@ -209,29 +253,26 @@ main section h2 {
 main #gallery .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 300px 300px 300px;
+    grid-template-rows: repeat(3, 1fr);
     gap: 0.5rem;
 }
 
+.grid-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .grid-item:first-child {
-    grid-column: 1 / 2 span;
-    grid-row: 1;
+    grid-column: 1 / 3;
 }
 
 .grid-item:nth-child(2) {
-    grid-row: 2 span;
-}
-/* 
-.grid-item:nth-child(3) {
-    grid-row: 1;
+    grid-row: 2 / 2 span;
 }
 
-.grid-item:nth-child(4) {
-    grid-row: 1;
-} */
-
-.grid-item picture > img {
-    object-fit: cover;
+.grid-item:last-child {
+    grid-column: 1 / 2 span;
 }
 
 main #explore ul {
@@ -241,6 +282,54 @@ main #explore ul {
     max-width: fit-content;
     list-style-position: inside;
     list-style-type: disc;
+}
+
+main #contact form {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+main #contact form div {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+main #contact form label {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+main #contact form input,
+main #contact form textarea {
+    width: 100%;
+    padding: 0.35rem 0.75rem;
+    outline: none;
+    border-radius: 0.3em;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+main #contact form input:focus {
+    border-color: var(--coral);
+}
+
+main #contact form button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25em 0.5em;
+    font-weight: 600;
+    background-color: var(--coral);
+    color: var(--slate);
+    border-radius: 0.3em;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+main #contact form button:focus,
+main #contact form textarea:focus {
+    border-color: var(--coral);
+    outline-color: var(--coral);
 }
 
 footer {
@@ -262,6 +351,10 @@ footer p {
 
     .grid-item:nth-child(2) {
         grid-row: 1 span;
+    }
+
+    .grid-item:last-child {
+        grid-column: 2 / 2 span;
     }
 }
 
